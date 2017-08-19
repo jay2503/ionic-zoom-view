@@ -9,7 +9,7 @@
 
       link(scope, elem, attr) {
 
-        $ionicPlatform.ready(() =>{
+        $ionicPlatform.ready(() => {
 
           elem.attr('ng-click', 'showZoomView()');
           elem.removeAttr('zoom-view');
@@ -21,8 +21,8 @@
           </style>
           <ion-modal-view class="zoom-view">
             <ion-header-bar>
-              <h1 class="title"></h1>
               <button ng-click="closeZoomView()" class="button button-clear button-dark">Done</button>
+              <h1 class="title"></h1>
             </ion-header-bar>
             <ion-content>
               <ion-scroll zooming="true" direction="xy" style="width: 100%; height: 100%; position: absolute; top: 0; bottom: 0; left: 0; right: 0; ">
@@ -42,7 +42,7 @@
             scope.ngSrc = attr.zoomSrc;
           };
 
-          scope.closeZoomView = function() {
+          scope.closeZoomView = function () {
             scope.zoomViewModal.hide();
           };
 
